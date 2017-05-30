@@ -1,0 +1,534 @@
+﻿html {
+    min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+.regist-bg{
+	background-image: url(../images/regist-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	min-width: 1200px;
+	background-color: #fff;
+	font-family: "PingFang SC","Microsoft YaHei",SimSun;
+}
+/*head*/
+.regist-header {
+    height: 80px;
+    background: #fff;
+	display: block;
+	margin: 0;
+    padding: 0;
+}
+.regist-header .container {
+    height: 80px;
+}
+.container {
+    min-width: 1180px;
+	width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+div {
+margin: 0;
+padding: 0;
+}
+.container::before{
+	display: table;
+	content: " ";
+}
+
+.head-left {
+    float: left !important;
+}
+.text-warning {
+    color: #ff9f00;
+}
+a {
+	cursor: pointer;
+	text-decoration: none;
+	background-color: transparent;
+}
+.regist-header .icon-regist-copy {
+    width: 100px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 82px;
+}
+.iconfont {
+    -webkit-text-stroke-width: 0 !important;
+	font-family: iconfont !important;
+	font-style: normal;
+}
+.icon-regist-copy::before {
+    content: "\e037";
+}
+.regist-header .regist-header-txt {
+    float: left;
+    font-size: 21px;
+    line-height: 22px;
+    padding-left: 15px;
+    border-left: solid 1px #ddd;
+    margin: 29px 0 29px 15px;
+    color: #555;
+}
+.regist-header .regist-header-txt2 {
+    float: right;
+    color: #9b9b9b;
+    line-height: 22px;
+    margin: 29px 0;
+    font-size: 16px;
+}
+.padding-r-10 {
+    padding-right: 10px !important;
+}
+/*head*/
+/*regist-left*/
+.container::after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+.regist-upC {
+    padding: 150px 30px 0;
+}
+.registupC-img {
+    float: left;
+    margin-right: 58px;
+}
+.registupC-img {
+    width: 411px;
+    height: 448px;
+}
+.registupC-img img {
+    width: 411px;
+    height: 448px;
+	border: 0;
+	vertical-align: middle;
+}
+
+
+.registupC-ibox {
+    width: 420px;
+    height: 448px;
+    float: left;
+	background: rgba(255,255,255,.69);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+	border-radius: 6px;
+}
+.registupC-ibox .registupC-ibox-header {
+    width: 100%;
+    height: 85px;
+    background: #Fff;
+    border-radius: 6px 6px 0 0;
+    padding: 10px 30px;
+    position: relative;
+}
+.registupC-ibox .registupC-ibox-header .registupC-ibox-htxt {
+    color: #ff9f00;
+    font-size: 14px;
+}
+.registupC-ibox .registupC-ibox-header .registupC-ibox-htxt a {
+    color: #c9c8ca;
+    border-left: solid 1px #dbd9d9;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+.registupC-ibox .registupC-ibox-header .registupC-ibox-htxt3 {
+    width: 100%;
+    height: 36px;
+    border: 1px solid #f3f3f3;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+    color: #ff9f00;
+    line-height: 36px;
+    margin-top: 10px;
+}
+.registupC-ibox .registupC-ibox-header .registupC-ibox-htxt3 img {
+    width: 23px;
+    height: 22px;
+    margin-right: 8px;
+    position: relative;
+    top: -4px;
+	border: 0;
+	vertical-align: middle;
+}
+.registupC-ibox .registupC-ibox-header .registupC-ibox-ewm {
+    width: 43px;
+    height: 42px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+
+
+.registupC-ibox .registupC-ibox-cont {
+    padding: 25px 25px 0;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+.registupC-ibox .registupC-ibox-cont .form-group {
+    height: 36px;
+    position: relative;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-regist .form-group::before {
+    content: " ";
+    display: table;
+}
+.registupC-ibox .registupC-ibox-cont .form-group label.label-ico {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 36px;
+    color: #a9a7a7;
+	font-weight: 400;
+	display: inline-block;
+	max-width: 100%;
+}
+.registupC-ibox .registupC-ibox-cont .form-group label.label-ico i {
+    font-size: 14px;
+}
+.iconfont {
+    -webkit-text-stroke-width: 0 !important;
+	font-family: iconfont !important;
+	font-style: normal;
+}
+i.icon-lianxiren {
+   width: 16px;
+   height: 16px;
+   display: inline-block;
+   background: url(../images/lianxiren2.png) no-repeat ;
+   vertical-align: middle;
+   text-align: center;
+}
+.registupC-ibox .registupC-ibox-cont .form-group label.label-ico::after {
+    width: 1px;
+    height: 12px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    background: #ded8d8;
+}
+.registupC-ibox .registupC-ibox-cont .form-group input.pl-inp {
+    width: 100%;
+    padding-left: 46px;
+}
+.registupC-ibox .registupC-ibox-cont .form-group input {
+    height: 36px;
+    line-height: 30px;
+    border-color: #e4e2e2;
+	outline: 0;
+	margin:0;
+}
+.form-control {
+	padding: 6px 12px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	font-size: 14px;
+	color: #555;
+	
+	font-family: inherit;
+	
+}
+.form-regist .form-group::after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+
+.registupC-ibox .registupC-ibox-cont .height-20 {
+    font-size: 11px;
+    padding-left: 15px;
+    line-height: 20px;
+	height: 20px;
+}
+.onerror {
+	font-size: 12px;
+	line-height: 22px;
+	vertical-align: middle;
+	color: red;
+	background: url(../images/Error.png) no-repeat;
+	padding-left: 25px;
+	margin: 0 !important;
+	font-family: inherit;
+}
+i.icon-mima {
+   width: 16px;
+   height: 16px;
+   display: inline-block;
+   background: url(../images/lock.png) no-repeat ;
+   vertical-align: middle;
+   text-align: center;
+}
+
+
+.w215 {
+    width: 215px;
+}
+.pull-left {
+    float: left !important;
+}
+.registupC-ibox .registupC-ibox-cont .yzm {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.w140 {
+    width: 140px;
+}
+.pull-right {
+    float: right !important;
+
+}
+.registupC-ibox .registupC-ibox-cont .yzm img {
+    max-width: 140px;
+    height: 34px;
+    border-radius: 4px;
+	border: 0;
+	width: 100%;
+	vertical-align: middle;
+}
+
+
+.registupC-ibox .registupC-ibox-cont .btn-getyzm {
+    line-height: 22px;
+    background: #7ED321;
+    border-color: #7ED321;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.03);
+    border-radius: 6px;
+}
+.height-36 {
+    height: 36px;
+}
+.font-14 {
+    font-size: 14px !important;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+	text-align: center;
+	touch-action: manipulation;
+	cursor: pointer;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 6px 12px;
+	-moz-user-select: none;
+	vertical-align: middle;
+	margin: 0;
+	font-family: inherit;
+	text-transform: none;
+	overflow: visible;
+}
+
+
+.font-12 {
+    font-size: 12px !important;
+}
+.clearfix::before {
+    content: " ";
+    display: table;
+}
+.checkbox {
+    padding-left: 20px;
+	position: relative;
+	display: block;
+}
+.line-h-22 {
+    line-height: 22px;
+}
+.clearfix::after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+.checkbox input[type="checkbox"] {
+    opacity: 1;
+    z-index: 1;
+	position: absolute;
+	margin-left: -20px;
+	
+	line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 5px;
+	vertical-align: middle;
+	min-height: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+	cursor: pointer;
+	max-width: 100%;
+}
+.text-color-sh {
+    color: #7d7d7d;
+}
+
+.onShow {
+    
+    padding-left: 25px;
+    margin: 5px 0px 0px 10px;
+    font-size: 12px;
+    line-height: 22px;
+    vertical-align: middle;
+    color: #444;
+	margin: 0 !important;
+}
+
+
+
+.registupC-ibox .registupC-ibox-cont .regist-btn {
+    width: 100%;
+    text-align: center;
+    height: 36px;
+    line-height: 22px;
+    background: #ff9f00;
+    font-size: 14px;
+	color: #fff;
+}
+.margin-b-10 {
+    margin-bottom: 10px;
+}
+
+
+
+
+.registupC-tipbox {
+    width: 142px;
+    height: 448px;
+    float: right;
+    background: rgba(255,255,255,.69);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+border-radius: 6px;
+position: relative;
+padding: 55px 10px 0;
+}
+.registupC-tipbox img.xiaotu {
+    width: 45px;
+    height: 44px;
+    position: absolute;
+    left: 48px;
+    top: -20px;
+	vertical-align: middle;
+}
+.registupC-tipbox .registupC-tipbox-ti {
+    width: 122px;
+    height: 26px;
+    background: transparent;
+    border: 1px solid rgba(155,154,155,.38);
+    border-radius: 6px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    color: green;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 28px;
+    left: 10px;
+    z-index: 2;
+}
+.registupC-tipbox .registupC-tipbox-con {
+    background: #fff;
+    border: 1px solid rgba(155,154,155,.38);
+    border-radius: 6px;
+    color: #b9b9b9;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 10px;
+    margin-bottom: 15px;
+	margin-top:20px;
+}
+.registupC-tipbox .registupC-tipbox-con p.text-color-hei {
+    text-align: center;
+    padding-bottom: 5px;
+	color: #4a4a4a;
+}
+p {
+    word-break: break-all;
+	margin: 0;
+	padding: 0;
+}
+.registupC-tipbox-con img{
+	width: 122px;
+    height: 122px;
+    position: relative;
+	border: 0;
+	vertical-align: middle;
+}
+/*regist-left*/
+
+.regist-footer {
+    background: 0 0;
+    border: 0;
+    padding: 0;
+    margin-top: 120px;
+	display: block;
+}
+.foot-container {
+    min-width: 1180px;
+	width: 1170px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.foot-container::before{
+display: table;
+content: " ";
+}
+.text-color-qh {
+    color: #eee;
+}
+.text-center {
+    text-align: center;
+}
+.row::before {
+    display: table;
+    content: " ";
+}
+.padding-lr-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row::after {
+    display: table;
+    content: " ";
+	clear: both;
+}
+.foot-container::after{
+display: table;
+content: " ";
+clear: both;
+}
+.clearfix::after{
+	display: table;
+content: " ";
+clear: both;
+}

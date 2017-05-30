@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd "
+	>
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url" value="jdbc:mysql://localhost:3306/tudi"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="123"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+			
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/tudi/entity/Appointimf.hbm.xml</value>
+				<value>com/tudi/entity/Users.hbm.xml</value>
+				<value>com/tudi/entity/Appoint.hbm.xml</value>
+				<value>com/tudi/entity/Landtype.hbm.xml</value>
+				<value>com/tudi/entity/Land.hbm.xml</value>
+				<value>com/tudi/entity/Admin.hbm.xml</value></list>
+		</property>
+		</bean>
+	<!-- 声明Hibernate事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!--  定义事务通知    --> 
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">	 
+	  <tx:attributes>	 
+	  	<tx:method name="*" propagation="REQUIRED" /> 
+	  </tx:attributes>
+	</tx:advice>
+		  <!--定义切面，并将事务通知和切面组合（定义哪些方法应用事务规则） -->
+    <aop:config>
+        <!-- 对com.tudi.biz包下的所有类的所有方法都应用事务规则 -->
+    	<aop:pointcut id="bizMethods" expression="execution(* com.tudi.biz.*.*(..))" /> 
+    	<!--  将事务通知和切面组合   --> 
+    	<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods" /> 
+    </aop:config>
+    
+    <!--Action的配置-->
+    <!-- 首页访问的Action -->
+    <bean id="indexAction" class="cn.wrh.tudi.index.action.IndexAction" scope="prototype"></bean>
+    <!-- 用户模块的Action -->
+    <bean id="userAction" class="cn.wrh.tudi.user.action.UserAction" scope="prototype">
+    <!-- 注入service -->
+    <property name="userService" ref="userService"></property>
+    </bean>
+    
+    
+    
+    
+    <!-- service的配置 -->
+    <bean id="userService" class="cn.wrh.tudi.user.service.UserService">
+       <!-- 注入Dao -->
+       <property name="userDao" ref="userDao"></property>
+    </bean>
+    <!-- Dao的配置 -->
+    <bean id="userDao" class="cn.wrh.tudi.user.dao.UserDao">
+    <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+	</beans>
